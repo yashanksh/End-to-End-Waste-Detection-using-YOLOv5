@@ -1,8 +1,5 @@
-from wasteDetection.logger import logging
-from wasteDetection.exception import AppException
-import sys
-
-try:
-    a=3/'a'
-except Exception as e:
-    raise AppException(e,sys)
+from wasteDetection.pipeline.training_pipeline import TrainPipeline
+print("Start of program")
+obj = TrainPipeline()
+obj.run_pipeline()
+print("end of program")
